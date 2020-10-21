@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "654076028576",
+    "firebase_url": "https://boellehatten-shoppinglis-76660.firebaseio.com",
+    "project_id": "boellehatten-shoppinglis-76660",
+    "storage_bucket": "boellehatten-shoppinglis-76660.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654076028576:android:4627f3f54cb4de5001cbc5",
+        "android_client_info": {
+          "package_name": "com.boellehatten_shoppinglist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654076028576-b77ctk3p5h8di68ebad7b5rskq1kvg1m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boellehatten_shoppinglist",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "654076028576-96n8n4jvtsfmmqgrludmlvuqlhmnuelk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw3LVvaWGHkTuWcdAnWWEom5chvHEWA6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654076028576-96n8n4jvtsfmmqgrludmlvuqlhmnuelk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
