@@ -17,6 +17,7 @@ import {
   Button,
   ActivityIndicator,
   FlatList,
+  TextInput,
 } from 'react-native';
 
 import {
@@ -28,6 +29,8 @@ import firestore from '@react-native-firebase/firestore';
 
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-community/google-signin';
+import Item from './components/Item';
+import ItemInput from './components/ItemInput';
 
 GoogleSignin.configure({
   webClientId: '654076028576-96n8n4jvtsfmmqgrludmlvuqlhmnuelk.apps.googleusercontent.com',
@@ -108,16 +111,13 @@ const App = () => {
       <StatusBar barStyle="dark-content" backgroundColor="white" />
       <SafeAreaView>
         <View style={styles.body}>
-        <FlatList
-          data={items}
-          renderItem={({ item }) => (
-            <View style={{ height: 100, flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <Text>Item ID: {item.id}</Text>
-              <Text>Item Name: {item.name}</Text>
-              <Text>Item Quantity: {item.quantity}</Text>
-            </View>
-          )}
-        />
+          <ItemInput />
+          <FlatList
+            data={items}
+            renderItem={({ item }) => (
+              <Item item={item} />
+            )}
+          />
         </View>
       </SafeAreaView>
     </View>
