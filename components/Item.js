@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         borderBottomEndRadius: 32,
         borderBottomWidth: 1,
         flexDirection: 'row',
-        flex: 1,
         alignItems: 'center',
         justifyContent: 'space-between',
     },

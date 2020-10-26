@@ -18,6 +18,8 @@ import {
   ActivityIndicator,
   FlatList,
   TextInput,
+  TouchableHighlight,
+  Pressable,
 } from 'react-native';
 
 import {
@@ -109,30 +111,40 @@ const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="white" />
-      <SafeAreaView>
-        <View style={styles.body}>
-          <ItemInput />
-          <FlatList
-            data={items}
-            renderItem={({ item }) => (
-              <Item item={item} />
-            )}
-          />
+        <View style={styles.container}>
+          <ItemInput style={styles.input} />
+          <View style={styles.list}>
+            <FlatList
+              data={items}
+              renderItem={({ item }) => (
+                <Item item={item} />
+              )}
+            />
+          </View>
+        <View style={styles.bottomBar}>
+          <Pressable style={{ backgroundColor: 'green', width: '100%' }} onPress={() => console.log('Heya')} />
         </View>
-      </SafeAreaView>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.white,
+    flex: 1,
   },
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  input: {
+    flex: 0.1,
   },
-  body: {
-    backgroundColor: Colors.white,
+  list: {
+    flex: 0.8,
+    flexGrow: 1,
+  },
+  bottomBar: {
+    flex: 0.1,
+    width: '100%',
+    backgroundColor: 'lightgray',
+    flexDirection: 'row',
   },
 });
 
